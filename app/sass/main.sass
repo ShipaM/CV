@@ -1,0 +1,172 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	a
+		text-decoration: none
+		transition: 0.2s ease-out
+	section,header
+		position: relative
+		background-size: cover
+		background-position: center
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+/*----------------------------------*/
+
+// header/ .site-header
+.site-header
+	min-height: 700px
+	position: relative
+	.header
+		height: 100vh
+		background-size: cover
+		color: gold
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		
+		&__title, &__slogan
+			text-shadow: 1px 1px 30px #0e92b8,
+			-1px -1px 30px #0e92b8,
+			-1px 1px 30px #0e92b8,
+			1px -1px 30px #0e92b8
+		&__title	
+			font-size: 26px
+		&__button
+			font-size: 46px
+			position: absolute
+			bottom: 50px
+			left: 50%
+			background: #0e92b8
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			opacity: .9
+// header/ .site-header end
+
+/*----------------------------------*/
+
+// section/ .portfolio
+.portfolio
+	padding-top: 30px
+	padding-bottom: 100px
+	&__header
+		font-size: 36px
+		margin-bottom: 30px
+		text-align: center
+	&__item
+		margin-bottom: 20px
+	&__img
+		margin-bottom: 17px
+		img
+			width: 360px
+			height: auto
+	&__title
+		font-size: 18px
+		text-align: center	
+		margin-bottom: 5px
+// section/ .portfolio end
+
+/*----------------------------------*/
+
+// footer/ .site-footer			
+.footer
+	background-color: #061034
+	color: #6479a2
+	padding-top: 90px
+	padding-bottom: 90px
+	text-align: center
+	p
+		margin-top: 0
+		margin-bottom: 15px		
+	&__name
+		font-size: 28px
+		margin-bottom: 10px
+	&__social-icons
+		color: #fff
+		font-size: 32px
+		a
+			margin-right: 30px
+			color: #fff
+			text-decoration: none
+			&:last-child
+				margin-right: 0
+			&:hover
+				color: gold
+				
+	&__button
+		border: 2px solid #fff
+		font-weight: bold
+		display: inline-block
+		border-radius: 50px
+		text-transform: uppercase
+		letter-spacing: 1.6px
+		padding: 8px 23px	
+		margin-bottom: 13px
+		&:hover
+			color: #061034
+			background-color: #fff
+			text-decoration: none
+// footer/ .site-footer end
+
+/*----------------------------------*/
+
+// .portfolio-singlepage
+.portfolio-singlepage, .portfolio-secondpage
+	padding-top: 50px
+	padding-bottom: 50px
+	text-align: center
+	img	
+		margin-bottom: 50px				
+	&__button-back
+		border: 2px solid #061034
+		font-weight: bold
+		display: inline-block
+		border-radius: 50px
+		text-transform: uppercase
+		letter-spacing: 1.6px
+		padding: 8px 23px	
+		margin-bottom: 13px
+		&:hover
+			color: #fff
+			background-color: #061034
+			text-decoration: none
+
+@import "media" // Always at the end
